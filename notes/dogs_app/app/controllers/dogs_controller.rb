@@ -18,7 +18,7 @@ end
 
 # create
 post '/dogs' do
-  @dog = Dog.new(name: params[:name], age: params[:age])
+  @dog = Dog.new(params[:dog])
   if @dog.save
     redirect "/dogs/#{@dog.id}"
   else
