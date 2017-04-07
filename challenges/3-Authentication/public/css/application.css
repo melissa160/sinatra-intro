@@ -79,3 +79,7 @@ form.quirks {
   background:none;
   font-weight: :bold;
 }
+
+.h1_login {
+  margin-top: 200px;
+}
