@@ -1,3 +1,11 @@
+URL = VERBO + PATH
+
+Path = protocolo + host + ruta
+
+http://localhost:3000/sessions/new 
+
+
+
 get '/' do
  # Homeage
  # Por hacer : Mostrar todo los usuario si se esta logueado
@@ -7,6 +15,7 @@ end
 #----------- SESSIONS -----------
 
 get '/sessions/new' do
+<<<<<<< HEAD
   # render sign-in page 
   erb :sign_in
 end
@@ -21,6 +30,14 @@ post '/sessions' do
     redirect '/sessions/new'
   end
 
+=======
+  # render sign-in page
+end
+
+post '/sessions' do
+  session[:user_id] = user.id
+  red
+>>>>>>> upstream/master
 end
 
 

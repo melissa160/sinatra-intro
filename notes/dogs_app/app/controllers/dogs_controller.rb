@@ -20,6 +20,7 @@ end
 post '/dogs' do
   @dog = Dog.new(params[:dog])
   if @dog.save
+    status 302 301 
     redirect "/dogs/#{@dog.id}"
   else
     @errors = @dog.errors.full_messages
@@ -34,7 +35,7 @@ get '/dogs/:id/edit' do
 end
 
 #update
-patch '/dogs/:id' do
+put '/dogs/:id' do
   dog = Dog.find_by(id: params[:id])
   dog.update(name: params[:name], age: params[:age])
   redirect "/dogs/#{dog.id}"

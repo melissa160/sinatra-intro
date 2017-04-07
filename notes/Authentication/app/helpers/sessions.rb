@@ -1,7 +1,9 @@
 helpers do
-
   def current_user
-        # Por hacer: devolver la instancia del usuario logueado si hay uno.
+    if session[:user_id]
+      current_user = User.find(session[:user_id])
+    else
+      nil
+    end
   end
-
 end
